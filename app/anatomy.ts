@@ -16,8 +16,8 @@ export const SYSTEMS: {id:SystemId;name:string;color:string;description:string}[
  {id:'integumentary',name:'Powierzchnia ciała',color:'#ba9b7d',description:'Powierzchnia ciała jest zewnętrznym punktem odniesienia. Powłoka wspólna tworzy barierę ochronną i bierze udział w czuciu oraz termoregulacji.'},
  {id:'connective',name:'Tkanka łączna',color:'#aec3bb',description:'Chrząstki, więzadła, ścięgna i inne tkanki łączne podpierają, łączą i oddzielają struktury. Stabilizują stawy i rozkładają obciążenia mechaniczne.'},
 ];
-export interface Part {id:string;name:string;pl?:string;conceptId:string;system:SystemId;chunk:number;positions:number;normals:number;indices:number;vertexCount:number;indexCount:number;bounds:[number[],number[]]}
-export interface Concept {id:string;name:string;pl?:string;elements:string[]}
+export interface Part {id:string;name:string;pl?:string;mk?:string;conceptId:string;system:SystemId;chunk:number;positions:number;normals:number;indices:number;vertexCount:number;indexCount:number;bounds:[number[],number[]]}
+export interface Concept {id:string;name:string;pl?:string;mk?:string;elements:string[]}
 export interface Atlas {version:string;sex?:'male';source?:string;scope?:string;parts:Part[];concepts:Concept[];chunks:{url:string;bytes:number;gzip?:string;gzipBytes?:number}[];triangles:number}
 export type View = 'three-quarter'|'front'|'back'|'side';
 export interface SceneState {inspectorOpen?:boolean;explode:number;visible:SystemId[];selected:string[];isolate:boolean;view:View;rotate:boolean;reset:number}
@@ -50,3 +50,5 @@ export function explanation(name:string,system:SystemId){return EXPLANATIONS[nam
 
 /** Nazwa po polsku (pole pl dopisywane przez atlas_sync.py na marcinchlosta.pl), z rezerwą na nazwę oryginalną. */
 export const plName=(x:{name:string;pl?:string}|null|undefined)=>x?(x.pl??x.name):'';
+/** Przyczepy, funkcja i unerwienie mięśnia (models/miesnie.json z atlas_sync.py; klucz mk w części/pojęciu). */
+export interface MuscleFacts {pl:string;poczatek?:string;koniec?:string;funkcja?:string;unerwienie?:string}
