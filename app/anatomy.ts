@@ -1,36 +1,52 @@
 export type SystemId = 'skeletal'|'muscular'|'arterial'|'venous'|'nervous'|'digestive'|'respiratory'|'urinary'|'reproductive'|'lymphatic'|'endocrine'|'integumentary'|'connective'|'sensory'|'cardiac';
 export const SYSTEMS: {id:SystemId;name:string;color:string;description:string}[] = [
- {id:'skeletal',name:'Skeleton',color:'#e2d9ba',description:'Bones form the supporting framework of the body, protect organs, and provide attachment points for muscles. Their internal tissue also stores minerals and produces blood cells.'},
- {id:'muscular',name:'Muscles',color:'#a85b50',description:'Skeletal muscles generate movement by pulling on their attachments. Together with tendons, they move joints, stabilize posture, and produce heat.'},
- {id:'cardiac',name:'Heart',color:'#b96760',description:'The heart is a muscular pump with four chambers. Its valves direct blood forward through the pulmonary and systemic circuits.'},
- {id:'sensory',name:'Sensory organs',color:'#b0c8ce',description:'These structures contribute to special senses, including sight, hearing, and balance. Their specialized tissues detect stimuli and work with the nervous system to convey information.'},
- {id:'arterial',name:'Arteries',color:'#c05245',description:'The heart drives blood through the circulation. Arteries carry blood away from the heart to supply tissues or, in the pulmonary circuit, to the lungs.'},
- {id:'venous',name:'Veins',color:'#527c9f',description:'Veins return blood toward the heart. Superficial and deep networks collect blood from the tissues; the pulmonary veins bring oxygenated blood back from the lungs.'},
- {id:'nervous',name:'Nervous system',color:'#d8b565',description:'The brain, spinal cord, and peripheral nerves carry and process signals. They support sensation, movement, coordination, and automatic regulation of body functions.'},
- {id:'respiratory',name:'Respiratory',color:'#b98991',description:'The airways conduct air to the lungs, where oxygen and carbon dioxide move between air and blood. Breathing depends on pressure changes produced by respiratory muscles.'},
- {id:'digestive',name:'Digestive',color:'#b8916b',description:'The digestive tract breaks down food, absorbs nutrients and water, and moves waste onward. Accessory organs contribute bile and digestive enzymes.'},
- {id:'urinary',name:'Urinary',color:'#b47961',description:'The kidneys filter blood and regulate fluid, electrolyte, and acid–base balance. Urine travels through the ureters to the bladder and exits through the urethra.'},
- {id:'lymphatic',name:'Lymphatic',color:'#879f7c',description:'Lymphatic vessels return excess tissue fluid to the circulation. Lymph nodes and other lymphoid organs support immune surveillance and responses.'},
- {id:'endocrine',name:'Endocrine',color:'#c5a09a',description:'Endocrine organs release hormones into the blood to coordinate processes such as metabolism, growth, stress responses, and reproduction.'},
- {id:'reproductive',name:'Reproductive',color:'#bda098',description:'The male reproductive structures represented here contribute to sperm production, maturation, transport, and the production of sex hormones.'},
- {id:'integumentary',name:'Body surface',color:'#ba9b7d',description:'The body surface provides an outer anatomical reference. The integumentary system forms a protective barrier and contributes to sensation and temperature regulation.'},
- {id:'connective',name:'Connective tissue',color:'#aec3bb',description:'Cartilage, ligaments, and other connective tissues support, connect, and separate structures. Their roles include stabilizing joints and distributing mechanical loads.'},
+ {id:'skeletal',name:'Szkielet',color:'#e2d9ba',description:'Kości tworzą rusztowanie ciała, chronią narządy i są miejscem przyczepu mięśni. Ich wnętrze magazynuje minerały i wytwarza komórki krwi.'},
+ {id:'muscular',name:'Mięśnie',color:'#a85b50',description:'Mięśnie szkieletowe wytwarzają ruch, pociągając za swoje przyczepy. Razem ze ścięgnami poruszają stawami, stabilizują postawę i wytwarzają ciepło.'},
+ {id:'cardiac',name:'Serce',color:'#b96760',description:'Serce to mięśniowa pompa o czterech jamach. Zastawki kierują krew do przodu przez krążenie płucne i krążenie duże.'},
+ {id:'sensory',name:'Narządy zmysłów',color:'#b0c8ce',description:'Struktury zmysłów wzroku, słuchu i równowagi. Ich wyspecjalizowane tkanki odbierają bodźce i przekazują informacje układowi nerwowemu.'},
+ {id:'arterial',name:'Tętnice',color:'#c05245',description:'Serce tłoczy krew do naczyń. Tętnice prowadzą krew od serca do tkanek, a w krążeniu płucnym — do płuc.'},
+ {id:'venous',name:'Żyły',color:'#527c9f',description:'Żyły prowadzą krew z powrotem do serca. Sieć powierzchowna i głęboka zbiera krew z tkanek; żyły płucne przynoszą utlenowaną krew z płuc.'},
+ {id:'nervous',name:'Układ nerwowy',color:'#d8b565',description:'Mózgowie, rdzeń kręgowy i nerwy obwodowe przewodzą i przetwarzają sygnały. Odpowiadają za czucie, ruch, koordynację i automatyczną regulację funkcji ciała.'},
+ {id:'respiratory',name:'Układ oddechowy',color:'#b98991',description:'Drogi oddechowe prowadzą powietrze do płuc, gdzie tlen i dwutlenek węgla przechodzą między powietrzem a krwią. Oddychanie zależy od zmian ciśnienia wytwarzanych przez mięśnie oddechowe.'},
+ {id:'digestive',name:'Układ pokarmowy',color:'#b8916b',description:'Przewód pokarmowy rozkłada pokarm, wchłania składniki odżywcze i wodę oraz przesuwa resztki dalej. Narządy dodatkowe dostarczają żółć i enzymy trawienne.'},
+ {id:'urinary',name:'Układ moczowy',color:'#b47961',description:'Nerki filtrują krew i regulują gospodarkę wodną, elektrolitową i kwasowo-zasadową. Mocz płynie moczowodami do pęcherza i opuszcza go cewką moczową.'},
+ {id:'lymphatic',name:'Układ chłonny',color:'#879f7c',description:'Naczynia chłonne zwracają nadmiar płynu tkankowego do krwiobiegu. Węzły chłonne i inne narządy limfatyczne wspierają odporność.'},
+ {id:'endocrine',name:'Układ dokrewny',color:'#c5a09a',description:'Gruczoły dokrewne uwalniają hormony do krwi, koordynując m.in. metabolizm, wzrost, reakcję na stres i rozród.'},
+ {id:'reproductive',name:'Układ rozrodczy',color:'#bda098',description:'Przedstawione męskie narządy rozrodcze odpowiadają za wytwarzanie, dojrzewanie i transport plemników oraz wytwarzanie hormonów płciowych.'},
+ {id:'integumentary',name:'Powierzchnia ciała',color:'#ba9b7d',description:'Powierzchnia ciała jest zewnętrznym punktem odniesienia. Powłoka wspólna tworzy barierę ochronną i bierze udział w czuciu oraz termoregulacji.'},
+ {id:'connective',name:'Tkanka łączna',color:'#aec3bb',description:'Chrząstki, więzadła, ścięgna i inne tkanki łączne podpierają, łączą i oddzielają struktury. Stabilizują stawy i rozkładają obciążenia mechaniczne.'},
 ];
-export interface Part {id:string;name:string;conceptId:string;system:SystemId;chunk:number;positions:number;normals:number;indices:number;vertexCount:number;indexCount:number;bounds:[number[],number[]]}
-export interface Concept {id:string;name:string;elements:string[]}
+export interface Part {id:string;name:string;pl?:string;conceptId:string;system:SystemId;chunk:number;positions:number;normals:number;indices:number;vertexCount:number;indexCount:number;bounds:[number[],number[]]}
+export interface Concept {id:string;name:string;pl?:string;elements:string[]}
 export interface Atlas {version:string;sex?:'male';source?:string;scope?:string;parts:Part[];concepts:Concept[];chunks:{url:string;bytes:number;gzip?:string;gzipBytes?:number}[];triangles:number}
 export type View = 'three-quarter'|'front'|'back'|'side';
 export interface SceneState {inspectorOpen?:boolean;explode:number;visible:SystemId[];selected:string[];isolate:boolean;view:View;rotate:boolean;reset:number}
 export const DEFAULT_VISIBLE:SystemId[] = ['cardiac','sensory','skeletal','muscular','arterial','venous','nervous','respiratory','digestive','urinary','lymphatic','endocrine','reproductive','connective'];
 export const EXPLANATIONS:Record<string,string> = {
- 'heart':'A muscular pump in the chest. Its right side sends blood to the lungs; its left side sends blood through the systemic circulation.',
- 'liver':'A large organ beneath the right side of the diaphragm. It processes absorbed nutrients, produces bile, and synthesizes many proteins carried in the blood.',
- 'brain':'The central organ of the nervous system. Its interconnected regions support perception, movement, memory, language, and the regulation of bodily functions.',
- 'stomach':'A muscular chamber between the esophagus and small intestine. It stores and mixes food with acid and enzymes before releasing it into the duodenum.',
- 'spleen':'A lymphoid organ in the upper left abdomen. It filters blood, removes aging blood cells, and participates in immune responses.',
- 'pancreas':'An abdominal organ with digestive and endocrine roles. It supplies enzymes to the small intestine and releases hormones including insulin and glucagon.',
- 'urinary bladder':'A muscular reservoir in the pelvis that stores urine arriving from the kidneys through the ureters.',
- 'trachea':'The main airway connecting the larynx to the bronchi. Its cartilage supports keep the airway open during breathing.',
- 'diaphragm':'A broad muscle separating the chest and abdomen. When it contracts, it increases chest volume and helps draw air into the lungs.',
+ 'heart':'Mięśniowa pompa w klatce piersiowej. Prawa połowa tłoczy krew do płuc, lewa — do krążenia dużego.',
+ 'liver':'Duży narząd pod prawą kopułą przepony. Przetwarza wchłonięte składniki odżywcze, wytwarza żółć i wiele białek krwi.',
+ 'brain':'Centralny narząd układu nerwowego. Jego połączone obszary odpowiadają za odbiór bodźców, ruch, pamięć, mowę i regulację funkcji ciała.',
+ 'stomach':'Mięśniowy zbiornik między przełykiem a jelitem cienkim. Magazynuje pokarm i miesza go z kwasem i enzymami, zanim przekaże go do dwunastnicy.',
+ 'spleen':'Narząd limfatyczny w lewym górnym kwadrancie brzucha. Filtruje krew, usuwa stare krwinki i uczestniczy w odpowiedzi odpornościowej.',
+ 'pancreas':'Narząd jamy brzusznej o funkcji trawiennej i hormonalnej. Dostarcza enzymy do jelita cienkiego i wydziela m.in. insulinę i glukagon.',
+ 'urinary bladder':'Mięśniowy zbiornik w miednicy, który gromadzi mocz spływający z nerek moczowodami.',
+ 'trachea':'Główna droga oddechowa łącząca krtań z oskrzelami. Chrzęstne pierścienie utrzymują ją otwartą podczas oddychania.',
+ 'diaphragm':'Główny mięsień wdechowy, oddzielający klatkę piersiową od jamy brzusznej. Skurcz przepony zwiększa objętość klatki i zasysa powietrze do płuc; współpracuje z mięśniami brzucha i dna miednicy w stabilizacji tułowia.',
+ 'calcaneal tendon':'Najgrubsze i najsilniejsze ścięgno ciała: łączy mięśnie brzuchaty łydki i płaszczkowaty z guzem kości piętowej. Przenosi duże siły przy chodzie, bieganiu i skokach — dlatego tendinopatia Achillesa jest częsta u biegaczy, a podstawą jej leczenia jest stopniowane obciążanie.',
+ 'patella':'Kość trzeszczkowa w ścięgnie mięśnia czworogłowego uda. Ślizga się w bruździe kości udowej i zwiększa ramię dźwigni prostowników kolana. Staw rzepkowo-udowy bywa źródłem bólu przodu kolana, np. przy schodach i przysiadzie.',
+ 'iliotibial tract':'Pogrubiałe pasmo powięzi szerokiej uda, biegnące od grzebienia biodrowego (napinacz powięzi szerokiej, pośladkowy wielki) do kłykcia bocznego kości piszczelowej. Ból po jego bocznej stronie przy kolanie to częsty problem biegaczy (ITBS).',
+ 'gluteus medius':'Mięsień na bocznej powierzchni talerza biodrowego, przyczepiony do krętarza większego kości udowej. Odwodzi udo i stabilizuje miednicę w staniu na jednej nodze. Jego ścięgno jest najczęstszym źródłem bólu bocznej strony biodra (GTPS).',
+ 'supraspinatus':'Mięsień stożka rotatorów leżący w dole nadgrzebieniowym łopatki. Inicjuje odwodzenie ramienia i centruje głowę kości ramiennej w panewce. Jego ścięgno przebiega pod wyrostkiem barkowym i jest najczęściej uszkadzanym ścięgnem stożka.',
+ 'infraspinatus':'Mięsień stożka rotatorów w dole podgrzebieniowym łopatki. Główny rotator zewnętrzny ramienia i stabilizator stawu ramiennego.',
+ 'teres minor':'Mały mięsień stożka rotatorów przy bocznym brzegu łopatki; wspólnie z podgrzebieniowym obraca ramię na zewnątrz.',
+ 'subscapularis':'Największy mięsień stożka rotatorów, na przedniej powierzchni łopatki. Rotuje ramię do wewnątrz i stabilizuje staw ramienny od przodu.',
+ 'intervertebral disk of lumbar vertebra':'Krążki międzykręgowe odcinka lędźwiowego amortyzują i rozkładają obciążenia między trzonami kręgów. Zmiany w krążkach są częste także u osób bez bólu; przy rwie kulszowej większość objawów łagodnieje bez operacji.',
+ 'piriformis':'Mięsień biegnący od przedniej powierzchni kości krzyżowej do krętarza większego. Rotuje udo na zewnątrz. Nerw kulszowy zwykle przechodzi tuż pod nim — stąd pojęcie zespołu mięśnia gruszkowatego.',
+ 'semitendinosus':'Jeden z mięśni kulszowo-goleniowych (tylna grupa uda). Zgina kolano i prostuje biodro; jego ścięgno tworzy gęsią stopkę i bywa pobierane do rekonstrukcji ACL.',
+ 'soleus':'Głęboki mięsień łydki pod brzuchatym; razem z nim tworzy mięsień trójgłowy łydki i ścięgno Achillesa. Pracuje szczególnie przy zgiętym kolanie — w bieganiu przenosi bardzo duże siły.',
+ 'levator scapulae':'Mięsień od wyrostków poprzecznych górnych kręgów szyjnych do kąta górnego łopatki. Unosi łopatkę i bierze udział w ruchach szyi; często odczuwany jako „sztywny kark”.',
 };
 export function explanation(name:string,system:SystemId){return EXPLANATIONS[name.toLowerCase()] ?? SYSTEMS.find(s=>s.id===system)?.description ?? '';}
+
+/** Nazwa po polsku (pole pl dopisywane przez atlas_sync.py na marcinchlosta.pl), z rezerwą na nazwę oryginalną. */
+export const plName=(x:{name:string;pl?:string}|null|undefined)=>x?(x.pl??x.name):'';
