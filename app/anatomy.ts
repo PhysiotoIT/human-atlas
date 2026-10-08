@@ -44,6 +44,16 @@ export const EXPLANATIONS:Record<string,string> = {
  'piriformis':'Mięsień biegnący od przedniej powierzchni kości krzyżowej do krętarza większego. Rotuje udo na zewnątrz. Nerw kulszowy zwykle przechodzi tuż pod nim — stąd pojęcie zespołu mięśnia gruszkowatego.',
  'semitendinosus':'Jeden z mięśni kulszowo-goleniowych (tylna grupa uda). Zgina kolano i prostuje biodro; jego ścięgno tworzy gęsią stopkę i bywa pobierane do rekonstrukcji ACL.',
  'soleus':'Głęboki mięsień łydki pod brzuchatym; razem z nim tworzy mięsień trójgłowy łydki i ścięgno Achillesa. Pracuje szczególnie przy zgiętym kolanie — w bieganiu przenosi bardzo duże siły.',
+ 'anterior cruciate ligament':'Więzadło wewnątrz stawu kolanowego, od kości udowej do piszczeli. Hamuje przesuwanie się piszczeli do przodu i nadmierną rotację; zrywa się najczęściej przy nagłej zmianie kierunku lub lądowaniu.',
+ 'posterior cruciate ligament':'Grubsze z więzadeł krzyżowych; hamuje przesuwanie się piszczeli do tyłu względem kości udowej.',
+ 'medial meniscus':'Chrząstka w kształcie litery C między kością udową a piszczelą po stronie przyśrodkowej. Rozkłada obciążenia i stabilizuje kolano; jest mniej ruchoma niż boczna i częściej uszkadzana.',
+ 'lateral meniscus':'Chrząstka w kształcie niemal zamkniętego pierścienia po bocznej stronie kolana; amortyzuje i stabilizuje staw.',
+ 'tibial collateral ligament':'Więzadło poboczne przyśrodkowe (MCL) — chroni kolano przed uciekaniem do środka (koślawieniem). Większość uszkodzeń leczy się bez operacji.',
+ 'fibular collateral ligament':'Więzadło poboczne boczne (LCL) — od kości udowej do głowy strzałki; chroni kolano przed szpotawieniem.',
+ 'anterior talofibular ligament':'Najczęściej uszkadzane więzadło przy skręceniu kostki do środka; łączy kostkę boczną z kością skokową.',
+ 'plantar aponeurosis':'Gruba warstwa tkanki łącznej od guza piętowego do palców. Napina sklepienie podłużne stopy podczas chodu i odbicia.',
+ 'glenoid labrum':'Pierścień włóknisto-chrzęstny na brzegu panewki łopatki; pogłębia ją i stabilizuje bark. Bywa uszkadzany przy zwichnięciu.',
+ 'acetabular labrum':'Obrąbek panewki stawu biodrowego — pogłębia panewkę i uszczelnia staw.',
  'levator scapulae':'Mięsień od wyrostków poprzecznych górnych kręgów szyjnych do kąta górnego łopatki. Unosi łopatkę i bierze udział w ruchach szyi; często odczuwany jako „sztywny kark”.',
 };
 export function explanation(name:string,system:SystemId){return EXPLANATIONS[name.toLowerCase()] ?? SYSTEMS.find(s=>s.id===system)?.description ?? '';}
