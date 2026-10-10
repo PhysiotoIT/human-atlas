@@ -92,3 +92,17 @@ h1 .edition{font-family:inherit;font-weight:500;font-size:10px;letter-spacing:.0
 
 /* marcinchlosta.pl: przyczepy i unerwienie mięśnia */
 .muscle-facts{margin-top:14px;padding-top:12px;border-top:1px solid #18253612}.muscle-facts h3{font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#687786;margin:0 0 8px}.muscle-facts dl{margin:0;display:grid;gap:4px}.muscle-facts dt{font-size:11px;color:#87929d;margin-top:6px}.muscle-facts dd{margin:0;font-size:13.5px;line-height:1.5;color:#364653}
+
+/* marcinchlosta.pl: ściąganie warstw (ukrywanie struktur bez kości) */
+.peel-open{display:flex;align-items:center;gap:8px;width:100%;justify-content:flex-start;font-size:12px;min-height:38px;margin:2px 0 4px;color:#394957;padding-inline:4px}
+.peel-open .small-number{margin-left:auto}
+.peel-panel{position:absolute;right:30px;top:94px;width:350px;max-height:calc(100dvh - 200px);border-radius:6px;padding:12px 18px 0;z-index:20;display:flex;flex-direction:column;gap:8px}
+.peel-panel [data-slot=input]{height:36px;font-size:14px;background:#18253605;border-color:transparent}
+.peel-panel .panel-foot{border-top:1px solid #18253612;padding-inline:2px;min-height:40px}
+.peel-intro{font-size:12px;line-height:1.5;color:#75818d;margin:0}
+.peel-panel .layer-list{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding-right:6px;scrollbar-width:thin}
+.layer-list h3{font-size:10px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:#87929d;margin:12px 0 4px}
+.layer-row{display:flex;align-items:center;gap:10px;min-height:34px;font-size:13px;color:#2f3d4a}
+.layer-row label{flex:1;min-width:0;cursor:pointer;overflow-wrap:anywhere;line-height:1.35}
+.layer-note{font-size:12px;line-height:1.5;color:#75818d;padding:8px 0;margin:0}
+@media(max-width:767px){.peel-panel{top:112px;left:12px;right:12px;width:auto;max-height:calc(100dvh - 240px)}.layer-row{min-height:44px}.peel-open{min-height:44px}}
