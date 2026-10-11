@@ -20,7 +20,13 @@ export interface Part {id:string;name:string;pl?:string;mk?:string;conceptId:str
 export interface Concept {id:string;name:string;pl?:string;mk?:string;elements:string[]}
 export interface Atlas {version:string;sex?:'male';source?:string;scope?:string;parts:Part[];concepts:Concept[];chunks:{url:string;bytes:number;gzip?:string;gzipBytes?:number}[];triangles:number}
 export type View = 'three-quarter'|'front'|'back'|'side';
-export interface SceneState {inspectorOpen?:boolean;explode:number;visible:SystemId[];selected:string[];isolate:boolean;view:View;rotate:boolean;reset:number}
+/** hidden: identyfikatory części ściągniętych warstwą (kości nigdy nie trafiają na tę listę). */
+export interface SceneState {inspectorOpen?:boolean;explode:number;visible:SystemId[];selected:string[];isolate:boolean;view:View;rotate:boolean;reset:number;hidden:string[]}
+/** Ściąganie warstw: szkielet zostaje zawsze (kontekst kostny), więc tylko części spoza kości można ukryć. */
+export const isSkeletal=(p:Part)=>p.system==='skeletal';
+export function isLayerHidden(p:Part,hidden:ReadonlySet<string>){return hidden.has(p.id)&&!isSkeletal(p);}
+/** Identyfikatory części, które wolno ściągnąć (spoza szkieletu). Nieznane identyfikatory są pomijane. */
+export function peelableElements(ids:string[],byId:Map<string,Part>){return ids.filter(id=>{const p=byId.get(id);return !!p&&!isSkeletal(p);});}
 export const DEFAULT_VISIBLE:SystemId[] = ['cardiac','sensory','skeletal','muscular','arterial','venous','nervous','respiratory','digestive','urinary','lymphatic','endocrine','reproductive','connective'];
 export const EXPLANATIONS:Record<string,string> = {
  'heart':'Mięśniowa pompa w klatce piersiowej. Prawa połowa tłoczy krew do płuc, lewa — do krążenia dużego.',
